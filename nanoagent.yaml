@@ -1,0 +1,39 @@
+_ > nanoagent.plugin.v0001.ManifestConfig:
+id: grocery-basket-optimizer
+name: Grocery Basket Optimizer
+version: 0.1.0
+status: ready
+spec: nanoagent.plugin/v0001
+
+runtime > nanoagent.plugin.v0001.RuntimeConfig:
+  type: mcp_stdio
+  command: [uv, run, --frozen, python, -m, plugin]
+
+permissions > nanoagent.plugin.v0001.PermissionsConfig:
+  network > nanoagent.plugin.v0001.NetworkConfig:
+    hosts: []
+  filesystem > nanoagent.plugin.v0001.FilesystemConfig:
+    write: []
+
+tools > dict[contract.Tool, nanoagent.plugin.v0001.ToolConfig]:
+  optimize_basket:
+    description: Choose minimum-cost whole packages satisfying amounts, required tags, and catalog stock
+
+tasks > dict[contract.Task, nanoagent.plugin.v0001.TaskConfig]:
+  optimize-grocery-basket:
+    description: Find the cheapest grocery basket in a supplied bounded catalog, or prove it infeasible
+    runner: tool
+    tools: [optimize_basket]
+    reference: null
+    instructions: |-
+      Use the exact supplied catalog, currency, amounts, stock, and required tags.
+      Do not invent prices, products, dietary properties, or stock. The user must
+      provide a catalog; this task does not search shops. Convert liters to ml and
+      kilograms to g exactly. Choose whole packages within stock and cover at least
+      each requested amount. Every selected package must belong to a requested item
+      and contain all its required tags. Return selections sorted by package_id,
+      coverage sorted by item_id, and the minimum total cost in integer cents.
+      Any minimum-cost basket is acceptable. If none exists, return feasible false,
+      no selections, null cost, and zero coverage for every requirement. An empty
+      requirement list has a feasible empty basket costing zero. Malformed inputs
+      and catalogs beyond the documented bounds must fail explicitly.

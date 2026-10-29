@@ -1,0 +1,18 @@
+{
+  "currency": "USD",
+  "requirements": [
+    {"item_id": "eggs", "amount": 12, "unit": "count", "required_tags": []},
+    {"item_id": "milk", "amount": 2, "unit": "l", "required_tags": ["lactose_free"]},
+    {"item_id": "rice", "amount": 1, "unit": "kg", "required_tags": []}
+  ],
+  "catalog": [
+    {"package_id": "eggs-6", "item_id": "eggs", "amount": 6, "unit": "count", "price_cents": 190, "stock": 2, "tags": []},
+    {"package_id": "eggs-12", "item_id": "eggs", "amount": 12, "unit": "count", "price_cents": 410, "stock": 1, "tags": []},
+    {"package_id": "milk-regular-2l", "item_id": "milk", "amount": 2, "unit": "l", "price_cents": 180, "stock": 1, "tags": []},
+    {"package_id": "milk-lf-1l", "item_id": "milk", "amount": 1, "unit": "l", "price_cents": 230, "stock": 2, "tags": ["lactose_free"]},
+    {"package_id": "milk-lf-2l", "item_id": "milk", "amount": 2000, "unit": "ml", "price_cents": 490, "stock": 1, "tags": ["lactose_free"]},
+    {"package_id": "rice-600g", "item_id": "rice", "amount": 600, "unit": "g", "price_cents": 130, "stock": 2, "tags": []},
+    {"package_id": "rice-1kg", "item_id": "rice", "amount": 1, "unit": "kg", "price_cents": 290, "stock": 1, "tags": []},
+    {"package_id": "rice-2kg", "item_id": "rice", "amount": 2, "unit": "kg", "price_cents": 600, "stock": 1, "tags": []}
+  ]
+}

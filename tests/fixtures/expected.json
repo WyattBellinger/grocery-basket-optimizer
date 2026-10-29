@@ -1,0 +1,15 @@
+{
+  "feasible": true,
+  "currency": "USD",
+  "selections": [
+    {"package_id": "eggs-6", "quantity": 2},
+    {"package_id": "milk-lf-1l", "quantity": 2},
+    {"package_id": "rice-600g", "quantity": 2}
+  ],
+  "coverage": [
+    {"item_id": "eggs", "unit": "count", "required_amount": 12, "covered_amount": 12, "surplus_amount": 0, "satisfied": true},
+    {"item_id": "milk", "unit": "ml", "required_amount": 2000, "covered_amount": 2000, "surplus_amount": 0, "satisfied": true},
+    {"item_id": "rice", "unit": "g", "required_amount": 1000, "covered_amount": 1200, "surplus_amount": 200, "satisfied": true}
+  ],
+  "total_cost_cents": 1100
+}

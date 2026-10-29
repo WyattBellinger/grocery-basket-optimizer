@@ -1,0 +1,11 @@
+_ > nanoagent.plugin.v0001.ProductConfig:
+tagline: "Find the cheapest packages that fill your grocery list"
+summary: "Compare a small catalog to fill your grocery list at the lowest total price. Respect dietary tags and stock, see exactly what each package covers, and get a checked answer when no basket is possible."
+highlights:
+  - "Whole packages, exact prices, and clear coverage for every item"
+  - "Required tags such as lactose_free apply to every selected package"
+  - "An independent exhaustive search checks the minimum total cost"
+steps:
+  - "Provide your grocery amounts and a catalog with prices, sizes, tags, and stock"
+  - "Ask for the cheapest basket that covers every requirement"
+  - "Review selected package IDs, quantities, coverage, total price, and verification"
